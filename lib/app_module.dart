@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:servicos/modules/cliente/cliente_module.dart';
+import 'package:servicos/modules/empresa/empresa_module.dart';
 import 'package:servicos/modules/home/home_module.dart';
 
 class AppModule extends Module {
@@ -13,7 +15,9 @@ class AppModule extends Module {
   @override
   void routes(RouteManager r) {
     r //
-        .module('/', module: HomeModule());
+      ..module('/', module: HomeModule())
+      ..module('/cliente', module: ClienteModule())
+      ..module('/empresa', module: EmpresaModule());
   }
 }
 

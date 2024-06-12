@@ -35,11 +35,19 @@ class _HomePageState extends State<HomePage> {
               },
               child: const Text('Cadastrar Empresa'),
             ),
+            const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/usuario');
               },
               child: const Text('Cadastrar Novo Usuário'),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/cliente');
+              },
+              child: const Text('Cadastrar novo cliente'),
             )
           ],
         ),
