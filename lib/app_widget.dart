@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart' hide Colors;
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:servicos/core/themes/main_theme.dart';
 
 class AppWidget extends StatefulWidget {
   static GlobalKey<ScaffoldMessengerState> globalKey = GlobalKey();
@@ -20,6 +21,8 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: MainTheme.light(),
+      darkTheme: MainTheme.dark(),
       scaffoldMessengerKey: AppWidget.globalKey,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
