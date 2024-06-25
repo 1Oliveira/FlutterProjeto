@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:servicos/core/widgets/page_overlay.dart';
+import 'package:servicos/modules/cliente/domain/entities/telefone.dart';
+import 'package:servicos/modules/cliente/presenter/pages/widgets/telefone_overlay.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -19,6 +22,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void _showOverlay(BuildContext context) {
+    Navigator.of(context).push(PageOverlay());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/usuario');
+                Navigator.pushNamed(context, '/empresa/usuario');
               },
               child: const Text('Cadastrar Novo Usuário'),
             ),
@@ -48,7 +55,10 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, '/cliente');
               },
               child: const Text('Cadastrar novo cliente'),
-            )
+            ),
+            ElevatedButton(
+                onPressed: () => _showOverlay(context),
+                child: Text("teste overlay"))
           ],
         ),
       ),

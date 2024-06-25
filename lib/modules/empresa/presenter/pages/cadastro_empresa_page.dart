@@ -75,7 +75,7 @@ class _CadastroEmpresaPageState extends State<CadastroEmpresaPage> {
                     print('Telefone: $_telefone');
                     print('Endereço: $_endereco');
                     print('CPF/CNPJ: $_cpfCnpj');
-                    Navigator.pushNamed(context, '/empresa/usuarios');
+                    Navigator.pushNamed(context, '/empresa/usuario');
                   }
                 },
                 child: const Text('Cadastrar'),

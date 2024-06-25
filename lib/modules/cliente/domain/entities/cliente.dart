@@ -10,6 +10,7 @@ class Cliente {
   final String email;
   final List<Telefone> telefones;
   final List<Endereco> enderecos;
+
   Cliente({
     required this.nome,
     required this.cpf,
@@ -39,8 +40,8 @@ class Cliente {
       nome: '',
       cpf: '',
       email: '',
-      telefones: [Telefone.empty()],
-      enderecos: [Endereco.empty()],
+      telefones: [],
+      enderecos: [],
     );
   }
 

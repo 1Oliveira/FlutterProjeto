@@ -6,6 +6,6 @@ class EmpresaModule extends Module {
   @override
   void routes(RouteManager r) {
     r.child('/', child: (_) => CadastroEmpresaPage());
-    r.child('/usuarios', child: (_) => CadastroUsuarioPage());
+    r.child('/usuario', child: (_) => CadastroUsuarioPage());
   }
 }
