@@ -24,6 +24,7 @@ class _CadastroUsuarioPageState extends State<CadastroUsuarioPage> {
         child: Form(
           key: _formKey,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TextFormField(
                 decoration: const InputDecoration(

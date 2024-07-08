@@ -23,7 +23,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   void _showOverlay(BuildContext context) {
-    Navigator.of(context).push(PageOverlay());
+    Navigator.of(context).push(TelefoneWidget(telefone: Telefone.empty()));
   }
 
   @override

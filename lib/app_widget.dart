@@ -22,7 +22,7 @@ class _AppWidgetState extends State<AppWidget> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: MainTheme.light(),
-      // darkTheme: MainTheme.dark(),
+      darkTheme: MainTheme.dark(),
       scaffoldMessengerKey: AppWidget.globalKey,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,

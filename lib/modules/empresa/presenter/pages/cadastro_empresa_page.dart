@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cpf_cnpj_validator/cpf_validator.dart';
 import 'package:cpf_cnpj_validator/cnpj_validator.dart';
+import 'package:servicos/core/widgets/main_text_form_field.dart';
 
 class CadastroEmpresaPage extends StatefulWidget {
   @override
@@ -23,38 +24,20 @@ class _CadastroEmpresaPageState extends State<CadastroEmpresaPage> {
           key: _formKey,
           child: Column(
             children: [
-              TextFormField(
-                decoration: const InputDecoration(labelText: 'Nome da Empresa'),
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Campo obrigatório';
-                  }
-                  return null;
-                },
+              MainTextFormField(
+                labelText: 'Nome da Empresa',
                 onSaved: (value) => _nomeEmpresa = value!,
               ),
-              TextFormField(
-                decoration: const InputDecoration(labelText: 'Telefone'),
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Campo obrigatório';
-                  }
-                  return null;
-                },
+              MainTextFormField(
+                labelText: 'Telefone',
                 onSaved: (value) => _telefone = value!,
               ),
-              TextFormField(
-                decoration: const InputDecoration(labelText: 'Endereço'),
-                validator: (value) {
-                  if (value!.isEmpty) {
-                    return 'Campo obrigatório';
-                  }
-                  return null;
-                },
+              MainTextFormField(
+                labelText: 'Endereço',
                 onSaved: (value) => _endereco = value!,
               ),
-              TextFormField(
-                decoration: const InputDecoration(labelText: 'CPF/CNPJ'),
+              MainTextFormField(
+                labelText: 'CPF/CNPJ',
                 validator: (value) {
                   if (value!.isEmpty) {
                     return 'Campo obrigatório';

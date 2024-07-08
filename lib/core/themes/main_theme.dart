@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:servicos/core/themes/color/dark_theme.dart';
-import 'package:servicos/core/themes/color/light_theme.dart';
-import 'package:servicos/core/themes/color/main_color_theme.dart';
+import 'package:servicos/core/themes/app_bar_theme.dart';
+import 'package:servicos/core/themes/main_text_theme.dart';
+import 'package:servicos/core/themes/elevated_button_theme.dart';
+import 'package:servicos/core/themes/dark_theme.dart';
+import 'package:servicos/core/themes/input_theme.dart';
+import 'package:servicos/core/themes/light_theme.dart';
+import 'package:servicos/core/themes/main_color_theme.dart';
 
 class MainTheme {
   const MainTheme._();
@@ -16,13 +20,16 @@ class MainTheme {
       extensions: [colorTheme],
       scaffoldBackgroundColor: colorTheme.background,
       unselectedWidgetColor: colorTheme.background,
+      elevatedButtonTheme: MainElevatedButtonTheme.theme(colorTheme),
+      textTheme: MainTextTheme.theme(colorTheme),
+      inputDecorationTheme: MainInputDecorationTheme.theme(colorTheme),
+      appBarTheme: MainAppBarTheme.theme(colorTheme),
+      // buttonTheme:
       // textTheme:
       // dataTableTheme:
       // checkboxTheme:
       // colorScheme:
       // iconTheme:
-      // inputDecorationTheme:
-      // appBarTheme:
       // cardTheme:
       // chipTheme:
       // navigationBarTheme:
